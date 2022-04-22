@@ -1,0 +1,13 @@
+:root {
+  --ff-heading: 'Poppins', sans-serif;
+  --ff-text: 'Work Sans', sans-serif;
+
+  --primary-color: #14233C;
+  --accent-color: #3C92A5;
+
+  --fs-heading: 9rem;
+  --fs-text: 1rem;
+  --fs-quote: .75rem;
+
+  --padding-content: 7.75rem;
+}
