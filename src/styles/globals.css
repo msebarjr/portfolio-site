@@ -41,4 +41,10 @@ textarea {
   max-width: 1600px;
   height: 100%;
   margin: 0 auto;
+  border: 1px solid black;
+}
+
+.container {
+  padding-left: 12.4rem;
+  padding-right: 12.4rem;
 }

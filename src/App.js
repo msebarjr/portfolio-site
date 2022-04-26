@@ -1,5 +1,11 @@
+import LandingPage from "./screens/LandingPage";
+
 function App() {
-    return <h1>Frontend Developer</h1>;
+    return (
+        <div className="main-container">
+            <LandingPage />
+        </div>
+    );
 }
 
 export default App;

@@ -12,5 +12,5 @@
   --heading-light-fade: rgba(255, 255, 255, .2);
   --heading-dark-fade: rgba(0, 0, 0, .2);
 
-  -padding-main-content: 12.4rem;
+  --padding-content: 0 12.4rem;
 }
