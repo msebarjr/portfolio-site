@@ -1,0 +1,16 @@
+:root {
+  --primary-color: rgba(20, 35, 60, 1);
+  --accent-color: rgba(60, 146, 165, 1);
+
+  --ff-heading: "Poppins", sans-serif;
+  --ff-text: "Work Sans", sans-serif;
+
+  --fs-heading: 14.4rem; 
+  --fs-text: 1.6rem;
+  --fs-quote: 1.2rem;
+
+  --heading-light-fade: rgba(255, 255, 255, .2);
+  --heading-dark-fade: rgba(0, 0, 0, .2);
+
+  -padding-main-content: 12.4rem;
+}
