@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 @font-face {
   font-family: "Fingerprint";
   src: local("Fingerprint"), url("./fonts/DigitalFingerprintPersonalUseRegular-lgq6Z.ttf") format("truetype");
+=======
+@font-face {
+  font-family: 'DigitalFingerprint';
+  src: local('DigitalFingerpring'), url(./fonts/DigitalFingerprintPersonalUseRegular-lgq6Z.ttf) format('truetype');
+>>>>>>> 71389a903f5b0bed135f1a985b6eccc83e98a580
 }
