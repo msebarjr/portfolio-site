@@ -1,21 +1,45 @@
 nav {
   background-color: rgba(20, 35, 60, 1);
+  /* background-color: transprent; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 2rem 5rem;
+  padding: 4rem 12.4rem;
+  max-height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav_icons {
+  display: none;
+}
+
+.bars {
+  transform: rotate(180deg);
+  transition: all 1s ease-in-out;
+}
+
+.times {
+  transform: rotate(360deg);
+  transition: all 1s ease-in-out;
 }
 
 .menu_list {
   display: flex;
   align-items: center; 
   justify-content: space-between;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu_list li a {
   color: white;
   padding: .5em 1em;
   margin-left: 2rem;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 
 .menu_list li a:hover {
@@ -24,23 +48,75 @@ nav {
   transition: all 0.5s ease-in-out;
 }
 
-button {
-  background-color: rgba(60, 146, 165, 1);
-  border-radius: 2px;
-  outline: none;
-  border: none;
-  padding: .7em 1em;
-  margin-left: 2rem;
-  cursor: pointer;
-  transition: transform .5s;
+.nav_button {   
+  padding: .5em 1em;
+  margin-left: 2rem;  
 }
 
-button:hover {
-  transform: scale(1.1); 
+/* Laptop */
+@media  screen and (max-width: 1280px) {
+  nav {
+    padding: 4rem 2rem;
+  }
+
+  .menu_list li a {
+    margin-left: .5rem;
+    padding: .4em .5em;
+  }
+
+  .nav_button {
+    margin-left: .5rem;
+    padding: .5em;
+  }
 }
 
-button a {
-  color: white;
+/* Tablet */
+@media screen and (max-width: 768px) {
+  nav {
+    padding-right: 8rem;
+  }
+  .nav_icons {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .bars, .times {
+    font-size: 2rem;
+    color: white;
+    
+  } 
+
+  .menu_list {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(20, 35, 60, 1);
+    border-top: 1px solid rgba(60, 146, 165, 1);;
+    padding: 2rem;
+    right: 0;
+    top: 80px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu_list li {
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .menu_list li a {
+    margin-left: 0;
+    padding: .75em 1.5em;
+  }
+
+  .menu_list.close {
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav_button {
+    width: 100%;
+    padding: .75em 1.5em;
+    margin: 3rem 0;
+  }
 }
-
-

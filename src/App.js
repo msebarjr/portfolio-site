@@ -1,10 +1,12 @@
-import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 import "./styles/globals.css";
 
 const App = () => {
     return (
-        <div className="main-container">
+        <div className="main_container">
             <Navbar />
+            {/* <Hero /> */}
         </div>
     );
 };

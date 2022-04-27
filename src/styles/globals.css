@@ -18,7 +18,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 ul, li {
@@ -33,15 +33,22 @@ a, a:visited {
 input,
 button,
 textarea {
-  font: sans-serif;
+  font: inherit;
   letter-spacing: 2px;
 }
 
 /* Custom Global Classes */
-.main-container {
+.main_container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1920px;
   height: 100%;
   margin: 0 auto;
-  border: 1px solid black;
+  position: relative;
 }
+
+/*  Breakpoints:
+      Desktop 1920
+      Laptop  1280
+      Tablet  768
+      Mobile  375
+*/
