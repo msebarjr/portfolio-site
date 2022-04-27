@@ -1,0 +1,46 @@
+nav {
+  background-color: rgba(20, 35, 60, 1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+
+.menu_list {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.menu_list li a {
+  color: white;
+  padding: .5em 1em;
+  margin-left: 2rem;
+}
+
+.menu_list li a:hover {
+  background-color: rgba(60, 146, 165, 1);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+button {
+  background-color: rgba(60, 146, 165, 1);
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  padding: .7em 1em;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+button:hover {
+  transform: scale(1.1); 
+}
+
+button a {
+  color: white;
+}
+
+

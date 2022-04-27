@@ -1,11 +1,12 @@
-import LandingPage from "./screens/LandingPage";
+import Navbar from "./components/Navbar/Navbar";
+import "./styles/globals.css";
 
-function App() {
+const App = () => {
     return (
         <div className="main-container">
-            <LandingPage />
+            <Navbar />
         </div>
     );
-}
+};
 
 export default App;
