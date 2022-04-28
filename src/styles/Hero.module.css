@@ -13,6 +13,36 @@
 .hero__content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 
+.hero__content_text {
+  margin-left: 10rem;  
+}
+
+.hero__content_text .name {
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.hero__content_text h1 {
+  font-family: Fingerprint;
+  font-size: 12rem;
+  font-weight: normal;
+  letter-spacing: 1rem;  
+}
+
+.hero__content_text p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.hero__content_text span {
+  color: rgba(60, 146, 165, 1);
+  font-weight: bold;
+}
+
+.hero_button {
+  margin-top: 2em;
+  padding: 1em 2em;  
+}

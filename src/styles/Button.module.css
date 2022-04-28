@@ -2,4 +2,11 @@
   outline: none;
   border: none;
   cursor: pointer;
+  border-radius: 2px;
+  background-color: rgba(60, 146, 165, 1);
+  color: white;
+}
+
+.button:hover {
+  background-color: rgba(60, 146, 165, .75);
 }
