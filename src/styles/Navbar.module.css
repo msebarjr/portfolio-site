@@ -1,10 +1,10 @@
 nav {
-  background-color: rgba(20, 35, 60, 1);
-  /* background-color: transprent; */
+  /* background-color: rgba(20, 35, 60, 1); */
+  background-color: transprent;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 4rem 12.4rem;
+  padding: 4rem 20rem 4rem 20rem;
   max-height: 80px;
   position: absolute;
   top: 0;
@@ -50,13 +50,16 @@ nav {
 
 .nav_button {   
   padding: .5em 1em;
-  margin-left: 2rem;  
+  margin-left: 2rem; 
+  color: white;
+  background-color: rgba(60, 146, 165, 1);
+  border-radius: 2px; 
 }
 
 /* Laptop */
 @media  screen and (max-width: 1280px) {
   nav {
-    padding: 4rem 2rem;
+    padding: 4rem 8rem 4rem 0;
   }
 
   .menu_list li a {

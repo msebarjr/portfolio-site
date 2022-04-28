@@ -9,13 +9,13 @@ const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    const resizeHandler = () => {
-        setWindowWidth(window.innerWidth);
-
-        if (windowWidth > 768) setShowMenu(false);
-    };
-
     useEffect(() => {
+        function resizeHandler() {
+            setWindowWidth(window.innerWidth);
+
+            if (windowWidth > 768) setShowMenu(false);
+        }
+
         window.addEventListener("resize", resizeHandler);
 
         return () => {
@@ -72,7 +72,11 @@ const Navbar = () => {
                     </a>
                 </li>
 
-                <Button cname={styles.nav_button} showMenu={showMenuHandler}>
+                <Button
+                    cname={styles.nav_button}
+                    showMenu={showMenuHandler}
+                    link="#contact"
+                >
                     {"<"}Contact{" />"}
                 </Button>
             </ul>
