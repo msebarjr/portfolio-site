@@ -1,9 +1,10 @@
 .card {
   padding: 2rem 2rem;
-  width: 100;
+  width: 100%;
   max-width: 400px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 3px;
+  margin: 3rem;
   background-color: rgba(255, 255, 255, .2);
 }
 

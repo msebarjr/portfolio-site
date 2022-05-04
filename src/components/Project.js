@@ -13,7 +13,7 @@ const Project = ({ project }) => {
                 <ReactPlayer
                     url={project.src}
                     width="100%"
-                    height="250px"
+                    height="150px"
                     playing
                     loop={true}
                     muted={true}

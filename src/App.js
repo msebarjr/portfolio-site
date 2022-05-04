@@ -7,6 +7,7 @@ import "./styles/globals.css";
 import "./App.css";
 import Tech from "./components/Tech";
 import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonials";
 
 const quotes = [
     {
@@ -16,6 +17,10 @@ const quotes = [
     {
         text: "I've come to believe that each of us has a personal calling that's as unique as a fingerprint - and that the best way to succeed is to discover what you love and then find a way to offer it to others in the form of service and working hard.",
         author: "Oprah Winfrey",
+    },
+    {
+        text: "I am not in competition with anyone but myself. My goal is to improve myself continuously.",
+        author: "Bill Gates",
     },
 ];
 
@@ -29,6 +34,8 @@ const App = () => {
             <Tech />
             <Quote cname="project__quote" quote={quotes[1]} />
             <Projects />
+            <Quote cname="testimonial__quote" quote={quotes[2]} />
+            <Testimonials />
         </div>
     );
 };

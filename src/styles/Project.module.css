@@ -6,18 +6,21 @@
 
 .preview {
   width: 100%;
+  margin-top: 2rem;
 }
 
 .tags {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   color: white;
   font-weight: normal;
+  margin-top: 1rem;
 }
 
 .tags p {
-  margin: 0 1rem;
+  margin: 1rem;
 }
 
 .links {

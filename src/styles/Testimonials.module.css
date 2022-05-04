@@ -1,0 +1,14 @@
+.testimonials {
+  margin-top: -10rem;
+}
+
+.testimonials h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14.4rem;
+  color: rgba(0, 0, 0, .2);
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 15rem;
+  padding-right: 12.4rem;
+  text-align: right;
+}

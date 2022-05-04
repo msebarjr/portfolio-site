@@ -11,6 +11,11 @@
   margin-top: 4rem;
 }
 
+.filter_button .active {
+  background-color: rgba(60, 146, 165, 1);
+  color: white;
+}
+
 .filter_button:hover {
   background-color: rgba(60, 146, 165, 1);
   color: white;
