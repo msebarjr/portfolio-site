@@ -1,23 +1,29 @@
 .hero {
   width: 100%;
   height: 90vh;
-  max-height: 900px;
+  max-height: 800px;
   padding: 0 12.4rem;
   background-color:  rgba(20, 35, 60, 1);
   color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .hero__content {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center; 
 }
+/* 
+.hero__content_icons {
+  position: fixed;
+  left: 12.4rem;
+} */
 
 .hero__content_text {
-  margin-left: 10rem;  
+  margin-left: 10rem;   
 }
 
 .hero__content_text .name {
@@ -26,15 +32,15 @@
 }
 
 .hero__content_text h1 {
-  font-family: Fingerprint;
+  font-family: "Fingerprint", sans-serif;
   font-size: 12rem;
   font-weight: normal;
   letter-spacing: 1rem;  
+  line-height: 1;
 }
 
-.hero__content_text p {
+.hero__content_text .info {
   font-size: 2rem;
-  margin-top: 1rem;
 }
 
 .hero__content_text span {
@@ -43,6 +49,94 @@
 }
 
 .hero_button {
-  margin-top: 2em;
-  padding: 1em 2em;  
+  margin-top: 2rem;
+  padding: 1em 4rem;    
+  text-transform: uppercase;
+}
+
+/*  Breakpoints:
+      Desktop 1920
+      Laptop  1280
+      Tablet  768
+      Mobile  375
+*/
+
+@media screen and (max-width: 1630px) {  
+  .hero__content_text .name {
+    font-size: 2.75rem;
+  }
+  .hero__content_text h1 {   
+    font-size: 8rem;    
+  }
+
+  .hero__content_text .info {
+    width: 520px;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero {
+    padding: 0 2rem 0 7rem ;    
+  }
+
+  .hero__content_text {
+    margin-left: 5rem;   
+  }
+  
+  .hero__content_text .name {
+    font-size: 2.6rem;
+  }
+  
+  .hero__content_text h1 {
+    margin: 1rem 0;
+    font-size: 6rem;
+    font-weight: normal;
+    letter-spacing: 1rem;  
+    line-height: .8;
+  }
+  
+  .hero__content_text .info {    
+    line-height: 1.25;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 13rem 3rem 15rem 3rem;
+  }
+
+  .hero__content {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .hero__content_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    margin-top: 4rem;
+  }
+
+  .hero__content_text {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hero__content_text .name {
+    font-size: 1.75rem;
+  }
+
+  .hero__content_text h1 {
+    font-size: 5rem; 
+    line-height: 1;     
+  }
+
+  .hero__content_text .info {
+    font-size: 1.6rem;
+    width: 100%;
+  }
 }

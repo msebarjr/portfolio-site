@@ -25,3 +25,27 @@
 .icon_wrapper:hover .icon {
   color: white;
 }
+
+/*  Breakpoints:
+      Desktop 1920
+      Laptop  1280
+      Tablet  768
+      Mobile  375
+*/
+
+@media screen and (max-width: 1280px) {
+  .icon_wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }  
+}
+
+@media screen and (max-width: 768px) {
+  .icon_wrapper:nth-child(2) {
+    margin: 0 2em;
+  }
+}

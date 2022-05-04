@@ -10,7 +10,7 @@ const Hero = () => {
         <div className={styles.hero}>
             <Background />
             <div className={styles.hero__content}>
-                <div>
+                <div className={styles.hero__content_icons}>
                     <SocialIcon link="https://www.linkedin.com/in/msebarjr">
                         <FaLinkedinIn />
                     </SocialIcon>

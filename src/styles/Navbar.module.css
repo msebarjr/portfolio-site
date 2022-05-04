@@ -4,7 +4,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 4rem 20rem 4rem 20rem;
+  padding: 4rem 12.4rem 4rem 0;
   max-height: 80px;
   position: absolute;
   top: 0;
@@ -76,7 +76,7 @@ nav {
 /* Tablet */
 @media screen and (max-width: 768px) {
   nav {
-    padding-right: 8rem;
+    padding-right: 6rem;
   }
   .nav_icons {
     display: block;
@@ -113,7 +113,7 @@ nav {
   }
 
   .menu_list.close {
-    right: -100%;
+    right: -300%;
     transition: all 0.5s ease-in-out;
   }
 
