@@ -36,7 +36,7 @@ const Projects = () => {
     };
 
     return (
-        <div className={styles.projects}>
+        <div className={styles.projects} id="projects">
             <h2>
                 {"<"}Projects {" />"}
             </h2>

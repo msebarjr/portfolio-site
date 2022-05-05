@@ -14,12 +14,13 @@
 .hero__content {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  position: relative; 
 }
 
 .hero__content_icons {
   position: fixed;
-  left: 12.4rem;
+  transform: translateX(-1500%);
 }
 
 .hero__content_text {

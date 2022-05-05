@@ -5,7 +5,7 @@ import { TESTIMONIALS } from "../data/testimonialData";
 
 const Testimonials = () => {
     return (
-        <div className={styles.testimonials}>
+        <div className={styles.testimonials} id="testimonials">
             <h2>
                 {"<"}Testimonials{" />"}
             </h2>
