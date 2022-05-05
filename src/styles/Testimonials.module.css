@@ -1,14 +1,63 @@
 .testimonials {
-  margin-top: -10rem;
+  margin-top: -17rem;
+  padding-bottom: 10rem;
 }
 
 .testimonials h2 {
   font-family: "Poppins", sans-serif;
-  font-size: 14.4rem;
+  font-size: 13rem;
   color: rgba(0, 0, 0, .2);
   text-transform: uppercase;
   font-weight: normal;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   padding-right: 12.4rem;
   text-align: right;
 }
+
+.testimonial_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimonial_wrapper {
+  width: 100%;
+  max-width: 625px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);  
+}
+
+.testimonial_wrapper:hover {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .testimonials h2 {
+    font-size: 8rem;
+    padding: 0;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 5.5rem;
+    padding: 0;
+    text-align: center;
+    margin-top: 9rem;
+  }
+
+  .testimonial_wrapper {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .testimonials h2 {
+    font-size: 4rem;
+   }
+}  

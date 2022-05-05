@@ -8,6 +8,7 @@ import "./App.css";
 import Tech from "./components/Tech";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 
 const quotes = [
     {
@@ -36,6 +37,7 @@ const App = () => {
             <Projects />
             <Quote cname="testimonial__quote" quote={quotes[2]} />
             <Testimonials />
+            <Contact />
         </div>
     );
 };

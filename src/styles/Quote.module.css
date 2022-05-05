@@ -23,4 +23,8 @@ blockquote {
     background-color: rgba(60, 146, 165, 1);
     padding: 2rem;
   }
+
+  blockquote small {
+    align-self: center;
+  }
 }

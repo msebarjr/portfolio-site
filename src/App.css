@@ -25,9 +25,21 @@
   transform: translate(125%, -50%);
 }
 
+@media screen and (max-width: 1400px) {
+  .testimonial__quote {
+    transform: translate(50%, -50%);
+  }
+}
+
 @media screen and (max-width: 1275px) {
   .about__quote {
     right: 10rem;
+  }
+
+  .testimonial__quote {
+    width: 285px;
+    height: 285px;
+    transform: translate(50%, -50%);
   }
 }
 
@@ -47,5 +59,12 @@
     z-index: 5;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .testimonial__quote {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    transform: translateY(-50%);
   }
 }

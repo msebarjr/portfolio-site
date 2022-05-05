@@ -1,8 +1,6 @@
 .about {
   padding-left: 12.4rem;
   width: 100%;
-  position: relative;
-  overflow: hidden;
 }
 
 .about__content {  
@@ -10,6 +8,7 @@
   flex-direction: column;
   margin-top: 8rem;
   margin-left: 9rem;
+  position: relative;
 }
 
 .about h2 {

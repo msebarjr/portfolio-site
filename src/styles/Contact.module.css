@@ -1,0 +1,72 @@
+.contact {
+  background-color: rgba(20, 35, 60, .5);
+  padding: 8rem 12.4rem
+}
+
+.contact form {
+  background-color: rgba(20, 35, 60, 1);
+  padding: 8rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+
+.contact form p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form_control {
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form_control label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.form_control label span {
+  color: red;
+}
+
+.form_control input, .form_control textarea {
+  width: 100%;
+  padding: .5em;
+  outline: none;
+  border: none;
+}
+
+button {
+  padding: .75em 5em;
+  background-color: rgba(60, 146, 165, 1);
+  color: white;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .75;
+  transition: all .3s ease-in-out;
+}
+
+button.disable {
+  pointer-events: none;
+  background-color: rgba(60, 146, 165, .5);
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 0;
+  }  
+  .contact form {   
+    padding: 4rem;  
+    margin: 0; 
+  }
+}
