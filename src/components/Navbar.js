@@ -74,7 +74,7 @@ const Navbar = () => {
 
                 <Button
                     cname={styles.nav_button}
-                    showMenu={showMenuHandler}
+                    onClick={showMenuHandler}
                     link="#contact"
                 >
                     {"<"}Contact{" />"}
