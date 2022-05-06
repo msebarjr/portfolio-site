@@ -1,6 +1,7 @@
 .contact {
   background-color: rgba(20, 35, 60, .5);
-  padding: 8rem 12.4rem
+  padding: 8rem 12.4rem;
+  position: relative;
 }
 
 .contact form {

@@ -2,12 +2,14 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 import styles from "../styles/Contact.module.css";
+import FormModal from "./FormModal";
 
 const Contact = () => {
     const [formIsValid, setFormIsValid] = useState(false);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [openSuccessModal, setOpenSuccessModal] = useState(false);
 
     const formRef = useRef();
 
@@ -34,6 +36,12 @@ const Contact = () => {
                     console.log(error.text);
                 }
             );
+
+        setOpenSuccessModal(true);
+
+        setTimeout(() => {
+            setOpenSuccessModal(false);
+        }, 5000);
 
         setName("");
         setEmail("");
@@ -101,6 +109,7 @@ const Contact = () => {
                     Send
                 </button>
             </form>
+            {openSuccessModal ? <FormModal /> : ""}
         </div>
     );
 };
