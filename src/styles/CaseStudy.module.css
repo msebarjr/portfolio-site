@@ -93,3 +93,40 @@
 .project__info h3{
   color: rgba(60, 146, 165, 1);
 }
+
+@media screen and (max-width: 900px) {
+  .case_study_wrapper {
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+
+  .project {
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .case_study {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  .case_study header h2 {
+    font-size: 3rem;
+  }
+
+  .video {
+    width: 300px;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .link {
+    width: 300px;
+    margin-top: 1rem;
+  }
+}
