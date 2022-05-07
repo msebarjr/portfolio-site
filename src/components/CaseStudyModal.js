@@ -1,10 +1,11 @@
+import ReactDOM from "react-dom";
 import ReactPlayer from "react-player/lazy";
 import { FaTimes, FaGithub } from "react-icons/fa";
 
-import styles from "../styles/CaseStudy.module.css";
+import styles from "../styles/CaseStudyModal.module.css";
 import Button from "./Button";
 
-const CaseStudy = ({ project, closeCaseStudy }) => {
+const CaseStudyModalOverlay = ({project, closeCaseStudy}) => {
     return (
         <div className={styles.case_study_container}>
             <div className={styles.case_study}>
@@ -67,4 +68,18 @@ const CaseStudy = ({ project, closeCaseStudy }) => {
     );
 };
 
-export default CaseStudy;
+const CaseStudyModal = ({ project, closeCaseStudy }) => {
+    return (
+        <>
+            {ReactDOM.createPortal(
+                <CaseStudyModalOverlay
+                    project={project}
+                    closeCaseStudy={closeCaseStudy}
+                />,
+                document.getElementById("modal-root")
+            )}
+        </>
+    );
+};
+
+export default CaseStudyModal;

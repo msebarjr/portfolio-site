@@ -5,7 +5,7 @@ import FilteredButton from "./FilteredButton";
 import { PROJECTS } from "../data/projectData";
 import Project from "./Project";
 import Button from "./Button";
-import CaseStudy from "./CaseStudy";
+import CaseStudyModal from "./CaseStudyModal";
 
 const Projects = () => {
     const [filteredProjects, setFilteredProjects] = useState([]);
@@ -50,14 +50,6 @@ const Projects = () => {
 
     return (
         <div className={styles.projects} id="projects">
-            {openCaseStudy ? (
-                <CaseStudy
-                    project={selectedCaseStudy}
-                    closeCaseStudy={handleCloseCaseStudy}
-                />
-            ) : (
-                ""
-            )}
             <h2>
                 {"<"}Projects {" />"}
             </h2>
@@ -85,6 +77,14 @@ const Projects = () => {
                     Contact Me
                 </Button>
             </div>
+            {openCaseStudy ? (
+                <CaseStudyModal
+                    project={selectedCaseStudy}
+                    closeCaseStudy={handleCloseCaseStudy}
+                />
+            ) : (
+                ""
+            )}
         </div>
     );
 };
