@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import styles from "../styles/Project.module.css";
 import Card from "./Card";
 
-const Project = ({ project }) => {
+const Project = ({ project, onClick }) => {
     return (
         <Card>
             <h3 className={styles.project__title}>{project.title}</h3>
@@ -25,7 +25,7 @@ const Project = ({ project }) => {
                 ))}
             </div>
             <div className={styles.links}>
-                <div className={styles.link}>More Info</div>
+                <div className={styles.link} onClick={onClick}>More Info</div>
                 <div className={styles.link}>
                     <a href={project.github} target="_blank" rel="noreferrer">
                         <IconContext.Provider

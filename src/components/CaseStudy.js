@@ -1,25 +1,27 @@
 import ReactPlayer from "react-player/lazy";
 import { FaTimes, FaGithub } from "react-icons/fa";
 
-import Card from "../components/Card";
 import styles from "../styles/CaseStudy.module.css";
 import Button from "./Button";
 
-const CaseStudy = ({ caseStudy }) => {
+const CaseStudy = ({ project, closeCaseStudy }) => {
     return (
         <div className={styles.case_study_container}>
-            <Card cname={styles.case_study}>
+            <div className={styles.case_study}>
                 <header>
                     <h2>Case Study</h2>
-                    <FaTimes className={styles.close} />
+                    <FaTimes
+                        className={styles.close}
+                        onClick={closeCaseStudy}
+                    />
                 </header>
                 <div className={styles.case_study_wrapper}>
                     <div className={styles.preview}>
                         <div className={styles.video}>
                             <ReactPlayer
-                                url={caseStudy.video}
+                                url={project.src}
                                 width="100%"
-                                height="150px"
+                                height="250px"
                                 playing
                                 loop={true}
                                 muted={true}
@@ -27,43 +29,40 @@ const CaseStudy = ({ caseStudy }) => {
                         </div>
                         <div className={styles.links}>
                             <Button
-                                className={styles.link}
-                                link={caseStudy.website}
+                                cname={styles.link}
+                                link={project.caseStudy.website}
                             >
                                 Visit Site
                             </Button>
-                            <Button
-                                className={styles.link}
-                                link={caseStudy.github}
-                            >
+                            <Button cname={styles.link} link={project.github}>
                                 <FaGithub className={styles.github_icon} />
                             </Button>
                         </div>
                     </div>
                     <div className={styles.project}>
-                        <div className={styles.project__name}>
+                        <div className={styles.project__info}>
                             <h3>Project Name:</h3>
-                            <p>{caseStudy.project}</p>
+                            <p>{project.title}</p>
                         </div>
-                        <div className={styles.project__problem}>
+                        <div className={styles.project__info}>
                             <h3>Problem:</h3>
-                            <p>{caseStudy.problem}</p>
+                            <p>{project.caseStudy.problem}</p>
                         </div>
-                        <div className={styles.project_solution}>
+                        <div className={styles.project__info}>
                             <h3>Solution:</h3>
-                            <p>{caseStudy.solution}</p>
+                            <p>{project.caseStudy.solution}</p>
                         </div>
-                        <div className={styles.project_obstacles}>
+                        <div className={styles.project__info}>
                             <h3>Obstacles:</h3>
-                            <p>{caseStudy.obstacles}</p>
+                            <p>{project.caseStudy.obstacles}</p>
                         </div>
-                        <div className={styles.project_learn}>
+                        <div className={styles.project__info}>
                             <h3>What Did I Learn?</h3>
-                            <p>{caseStudy.learned}</p>
+                            <p>{project.caseStudy.learned}</p>
                         </div>
                     </div>
                 </div>
-            </Card>
+            </div>
         </div>
     );
 };

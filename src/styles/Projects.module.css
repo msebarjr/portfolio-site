@@ -1,6 +1,7 @@
 .projects {
   padding: 12.4rem; 
   background-color: rgba(20, 35, 60, 1);
+  position: relative;
 }
 
 .projects h2 {

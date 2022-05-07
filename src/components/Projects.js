@@ -5,10 +5,13 @@ import FilteredButton from "./FilteredButton";
 import { PROJECTS } from "../data/projectData";
 import Project from "./Project";
 import Button from "./Button";
+import CaseStudy from "./CaseStudy";
 
 const Projects = () => {
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [activeFilter, setActiveFilter] = useState("");
+    const [selectedCaseStudy, setSelectedCaseStudy] = useState({});
+    const [openCaseStudy, setOpenCaseStudy] = useState(false);
 
     const filters = [
         "All",
@@ -35,8 +38,26 @@ const Projects = () => {
             );
     };
 
+    const handleCaseStudy = (id) => {
+        setOpenCaseStudy(true);
+        setSelectedCaseStudy(PROJECTS.find((project) => project.id === id));
+    };
+
+    const handleCloseCaseStudy = () => {
+        setOpenCaseStudy(false);
+        setSelectedCaseStudy({});
+    };
+
     return (
         <div className={styles.projects} id="projects">
+            {openCaseStudy ? (
+                <CaseStudy
+                    project={selectedCaseStudy}
+                    closeCaseStudy={handleCloseCaseStudy}
+                />
+            ) : (
+                ""
+            )}
             <h2>
                 {"<"}Projects {" />"}
             </h2>
@@ -52,7 +73,11 @@ const Projects = () => {
             </div>
             <div className={styles.project_wrapper}>
                 {filteredProjects.map((project) => (
-                    <Project key={project.id} project={project} />
+                    <Project
+                        key={project.id}
+                        project={project}
+                        onClick={handleCaseStudy.bind(this, project.id)}
+                    />
                 ))}
             </div>
             <div className={styles.projects_button_wrapper}>

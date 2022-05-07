@@ -9,11 +9,6 @@ import Tech from "./components/Tech";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
-import CaseStudy from "./components/CaseStudy";
-
-import { CASE_STUDY_DATA } from "./data/caseStudyData";
-
-const caseStudy = CASE_STUDY_DATA[0];
 
 const quotes = [
     {
@@ -43,7 +38,6 @@ const App = () => {
             <Quote cname="testimonial__quote" quote={quotes[2]} />
             <Testimonials />
             <Contact />
-            {/* <CaseStudy caseStudy={caseStudy} /> */}
         </div>
     );
 };

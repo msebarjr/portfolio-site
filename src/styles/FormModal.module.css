@@ -13,10 +13,6 @@
 .form_modal {
   width: 90%;
   max-width: 400px;
-  /* position: fixed;
-  top: 40%;
-  left: 49%;
-  transform: translate(-49%, -40%); */
   z-index: 100;
   overflow: hidden;
   background-color: rgba(60, 146, 165, 1);

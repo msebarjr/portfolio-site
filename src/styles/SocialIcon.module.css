@@ -7,7 +7,7 @@
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
-  border: 1px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(60, 146, 165, 1);
 }
 
 .icon_wrapper:nth-child(2) {
