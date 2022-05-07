@@ -22,9 +22,6 @@ I needed something to show potential clients and employers what I am capable of.
     * Build relationship with client
     * Keep open communication throughout entire process sending visual updates along the way
 
-
-
-
 ## Education
 
 Florida International University
@@ -32,14 +29,6 @@ Florida International University
 -   Graduated with BA in Computer Science
 -   Graduated on the Dean's List
 -   Member of Tau Sigma Honors Society
-
-# Recent Projects
-
-## Photgraphy Portfolio Website
-
-Website created for a photographer to give him an online presence aside from Instagram
-
-[View Website](https://www.mycbphotos.com/) / [View Github](https://github.com/msebarjr/CB-Photography)
 
 ## Lessons Learned While Creating My Portfolio Website
 
@@ -60,3 +49,11 @@ Website created for a photographer to give him an online presence aside from Ins
 -   Cross platform (Web/Mobile)
 -   Project filter based on tech
 -   Case Study modal for each project
+
+# Recent Projects
+
+## Photgraphy Portfolio Website
+
+Website created for a photographer to give him an online presence aside from Instagram
+
+[View Website](https://www.mycbphotos.com/) / [View Github](https://github.com/msebarjr/CB-Photography)
