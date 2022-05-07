@@ -10,7 +10,9 @@ const Tech = () => {
         <div className={styles.tech}>
             <div className={styles.top_page_icon_wrapper}>
                 <div className={styles.top_page_icon}>
-                    <SocialIcon link="#hero">
+                    <SocialIcon
+                        link="#hero"                      
+                    >
                         <FaArrowUp />
                     </SocialIcon>
                 </div>

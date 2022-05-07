@@ -9,12 +9,13 @@
 .top_page_icon_wrapper {
   width: 5rem;
   position: absolute;
-  right: 5rem;  
+  right: 7\rem;  
+
 }
 
 .top_page_icon {
   position: fixed;
-  bottom: 5rem;
+  bottom: 5rem;  
   z-index: 999;
 }
 
