@@ -4,7 +4,7 @@ const Button = (props) => {
     return (
         <a
             href={props.link}
-            target="_blank"
+            target={props.link !== "#contact" ? "_blank" : null}
             rel="noreferrer"
             onClick={props.onClick}
         >

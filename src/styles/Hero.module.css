@@ -21,6 +21,7 @@
 .hero__content_icons {
   position: fixed;
   transform: translateX(-1500%);
+  z-index: 999;
 }
 
 .hero__content_text {
