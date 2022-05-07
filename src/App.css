@@ -4,6 +4,8 @@
   position: absolute;
   right: 16rem;
   transform: translateY(-50%);
+  border: 1rem solid white;
+  outline: none;
 }
 
 .project__quote {
@@ -14,6 +16,7 @@
   position: absolute;
   z-index: 1;  
   transform: translate(50%, -50%);
+  border: 1rem solid white;
 }
 
 .testimonial__quote {

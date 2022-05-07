@@ -1,6 +1,5 @@
 nav {
-  /* background-color: rgba(20, 35, 60, 1); */
-  background-color: transprent;
+  background-color: transparent;
   display: flex;
   justify-content: flex-end;
   align-items: center;
