@@ -18,9 +18,15 @@
   position: relative; 
 }
 
+.hero_icons_wrapper {
+  width: 15rem;
+  position: absolute;
+  left: 0;
+  top: 1rem; 
+}
+
 .hero__content_icons {
   position: fixed;
-  transform: translateX(-1500%);
   z-index: 999;
 }
 
@@ -30,6 +36,8 @@
 
 .hero__content_text .name {
   font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
   margin: 0;
 }
 
@@ -43,6 +51,7 @@
 
 .hero__content_text .info {
   font-size: 2rem;
+  font-weight: normal;
 }
 
 .hero__content_text span {
@@ -83,7 +92,7 @@
   }
 
   .hero__content_text {
-    margin-left: 5rem;   
+    margin-left: 8rem;   
   }
   
   .hero__content_text .name {
@@ -100,6 +109,24 @@
   
   .hero__content_text .info {    
     line-height: 1.25;
+  }
+}
+
+@media screen and (max-width: 800px ) {
+  .hero_icons_wrapper {
+    display: none;
+  }
+  
+  .hero__content_icons {
+    display: none;
+  }
+
+  .hero__content_text {
+    margin-left: 2rem;
+  }
+
+  .hero__content_text h1 {
+    font-size: 9rem;
   }
 }
 

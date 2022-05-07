@@ -2,13 +2,13 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Quote from "./components/Quote";
-
-import "./styles/globals.css";
-import "./App.css";
 import Tech from "./components/Tech";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+
+import "./styles/globals.css";
+import "./App.css";
 
 const quotes = [
     {
@@ -32,7 +32,7 @@ const App = () => {
             <Hero />
             <Quote cname="about__quote" quote={quotes[0]} />
             <About quote={quotes[0]} />
-            <Tech />
+            <Tech />            
             <Quote cname="project__quote" quote={quotes[1]} />
             <Projects />
             <Quote cname="testimonial__quote" quote={quotes[2]} />

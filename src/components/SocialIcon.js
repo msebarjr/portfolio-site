@@ -7,10 +7,10 @@ const SocialIcon = (props) => {
         <div className={styles.icon_wrapper}>
             <a
                 href={props.link}
-                target="_blank"
+                target={props.link !== "#hero" ? "_blank" : null}
                 rel="noreferrer"
             >
-                <IconContext.Provider value={{ className: `${styles.icon}` }}>                    
+                <IconContext.Provider value={{ className: `${styles.icon}` }}>
                     {props.children}
                 </IconContext.Provider>
             </a>

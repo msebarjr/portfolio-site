@@ -2,6 +2,20 @@
   padding: 10rem 12.4rem 25rem;
   text-align: right;
   background-color: rgba(20, 35, 60, .5);
+  position: relative;
+  width: 100%;
+}
+
+.top_page_icon_wrapper {
+  width: 5rem;
+  position: absolute;
+  right: 5rem;  
+}
+
+.top_page_icon {
+  position: fixed;
+  bottom: 5rem;
+  z-index: 999;
 }
 
 .tech h2 {
@@ -34,6 +48,12 @@
 
   .tech_icons {
     padding-bottom: 15rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .top_page_icon_wrapper, .top_page_icon {
+    display: none;
   }
 }
 

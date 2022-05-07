@@ -28,6 +28,8 @@
   transform: translate(125%, -50%);
 }
 
+
+
 @media screen and (max-width: 1400px) {
   .testimonial__quote {
     transform: translate(50%, -50%);
