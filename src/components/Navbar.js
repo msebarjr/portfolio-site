@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import styles from "../styles/Navbar.module.css";
+import { navVariants } from "../animations/variants";
 import Button from "./Button";
 
 const Navbar = () => {
@@ -28,7 +30,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav>
+        <motion.nav variants={navVariants} initial="hidden" animate="visible">
             <div className={styles.nav_icons} onClick={showMenuHandler}>
                 {showMenu ? (
                     <IconContext.Provider
@@ -80,7 +82,7 @@ const Navbar = () => {
                     {"<"}Contact{" />"}
                 </Button>
             </ul>
-        </nav>
+        </motion.nav>
     );
 };
 

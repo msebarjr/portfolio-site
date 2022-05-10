@@ -32,7 +32,7 @@ const App = () => {
             <Hero />
             <Quote cname="about__quote" quote={quotes[0]} />
             <About quote={quotes[0]} />
-            <Tech />            
+            <Tech />
             <Quote cname="project__quote" quote={quotes[1]} />
             <Projects />
             <Quote cname="testimonial__quote" quote={quotes[2]} />

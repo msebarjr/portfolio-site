@@ -1,8 +1,13 @@
 import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import Background from "./Background";
 import SocialIcon from "./SocialIcon";
 import Button from "./Button";
+import {
+    heroContentVariants,
+    floatingIconsVariants,
+} from "../animations/variants";
 import styles from "../styles/Hero.module.css";
 
 const Hero = () => {
@@ -11,7 +16,13 @@ const Hero = () => {
             <Background />
             <div className={styles.hero__content}>
                 <div className={styles.hero_icons_wrapper}>
-                    <div className={styles.hero__content_icons}>
+                    <motion.div
+                        variants={floatingIconsVariants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ delay: 2, type: "tween", duration: 0.85 }}
+                        className={styles.hero__content_icons}
+                    >
                         <SocialIcon link="https://www.linkedin.com/in/msebarjr">
                             <FaLinkedinIn />
                         </SocialIcon>
@@ -21,19 +32,25 @@ const Hero = () => {
                         <SocialIcon link="https://www.github.com/msebarjr">
                             <FaGithub />
                         </SocialIcon>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className={styles.hero__content_text}>
+                <motion.div
+                    variants={heroContentVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className={styles.hero__content_text}
+                >
                     <p className={styles.name}>Michael Sebar Jr</p>
                     <h1>Frontend Developer</h1>
                     <p className={styles.info}>
                         who is leaving his fingerprints all over the{" "}
                         <span>web</span> and <span>mobile</span> applications.
                     </p>
+
                     <Button cname={styles.hero_button} link="#contact">
-                        Contact Me
+                        Contact
                     </Button>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
