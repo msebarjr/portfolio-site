@@ -86,7 +86,7 @@
      text-align: center;
      justify-content: center;
      align-items: center;
-   }
+   } 
 
    .about__content h2 {
      font-size: 4.5rem;
@@ -96,8 +96,10 @@
    }
 
    .about__content_bio {
+     text-align: center;
      margin-top: 4rem;
-     padding: 0 2rem;
+     padding: 0 2em;
+     margin: 6rem auto 0;
    }
 
    .about_button {

@@ -95,6 +95,14 @@
 }
 
 @media screen and (max-width: 900px) {
+  .case_study_container {
+    height: auto;
+  }
+
+  .case_study {
+    margin-top: 50rem;
+  }
+  
   .case_study_wrapper {
     flex-direction: column;
     margin-top: 8rem;

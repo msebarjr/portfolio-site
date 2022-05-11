@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import styles from "../styles/Projects.module.css";
 import FilteredButton from "./FilteredButton";
@@ -7,11 +9,44 @@ import Project from "./Project";
 import Button from "./Button";
 import CaseStudyModal from "./CaseStudyModal";
 
-const Projects = () => {
+
+const Projects = (props) => {
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [activeFilter, setActiveFilter] = useState("");
     const [selectedCaseStudy, setSelectedCaseStudy] = useState({});
-    const [openCaseStudy, setOpenCaseStudy] = useState(false);
+
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+    });
+    const headingAnimation = useAnimation();
+    const contentAnimation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            headingAnimation.start({
+                x: 0,
+                transition: {
+                    type: "tween",
+                    duration: 1.2,
+                },
+            });
+
+            contentAnimation.start({
+                y: 0,
+                opacity: 1,
+                transition: {
+                    type: "tween",
+                    duration: 2,
+                    delay: 1,
+                },
+            });
+        }
+
+        if (!inView) {
+            headingAnimation.start({ x: "-300vw" });
+            contentAnimation.start({ opacity: 0 });
+        }
+    }, [inView]);
 
     const filters = [
         "All",
@@ -38,22 +73,25 @@ const Projects = () => {
             );
     };
 
-    const handleCaseStudy = (id) => {
-        setOpenCaseStudy(true);
+    const openCaseStudyModal = (id) => {
+        props.handleCaseStudy();
         setSelectedCaseStudy(PROJECTS.find((project) => project.id === id));
     };
 
-    const handleCloseCaseStudy = () => {
-        setOpenCaseStudy(false);
+    const closeCaseStudyModal = () => {
+        props.handleCloseCaseStudy();
         setSelectedCaseStudy({});
     };
 
     return (
-        <div className={styles.projects} id="projects">
-            <h2>
+        <div ref={ref} className={styles.projects} id="projects">
+            <motion.h2 animate={headingAnimation}>
                 {"<"}Projects {" />"}
-            </h2>
-            <div className={styles.filter_buttons}>
+            </motion.h2>
+            <motion.div
+                animate={contentAnimation}
+                className={styles.filter_buttons}
+            >
                 {filters.map((item) => (
                     <FilteredButton
                         key={item}
@@ -62,28 +100,32 @@ const Projects = () => {
                         cname={activeFilter === item ? styles.active : ""}
                     />
                 ))}
-            </div>
-            <div className={styles.project_wrapper}>
+            </motion.div>
+            <motion.div
+                animate={contentAnimation}
+                className={styles.project_wrapper}
+            >
                 {filteredProjects.map((project) => (
                     <Project
                         key={project.id}
                         project={project}
-                        onClick={handleCaseStudy.bind(this, project.id)}
+                        onClick={openCaseStudyModal.bind(this, project.id)}
                     />
                 ))}
-            </div>
-            <div className={styles.projects_button_wrapper}>
+            </motion.div>
+            <motion.div
+                animate={contentAnimation}
+                className={styles.projects_button_wrapper}
+            >
                 <Button cname={styles.projects_button} link="#contact">
                     Contact Me
                 </Button>
-            </div>
-            {openCaseStudy ? (
+            </motion.div>
+            {props.caseStudy && (
                 <CaseStudyModal
                     project={selectedCaseStudy}
-                    closeCaseStudy={handleCloseCaseStudy}
+                    closeCaseStudy={closeCaseStudyModal}
                 />
-            ) : (
-                ""
             )}
         </div>
     );

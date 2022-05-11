@@ -1,30 +1,70 @@
+import { useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import styles from "../styles/Tech.module.css";
 import { TECH_ICONS } from "../data/techData";
 import TechIcon from "./TechIcon";
 import SocialIcon from "../components/SocialIcon";
 
-const Tech = () => {
+
+const Tech = (props) => {
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+    });
+    const headingAnimation = useAnimation();
+    const contentAnimation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            headingAnimation.start({
+                x: 0,
+                transition: {
+                    type: "tween",
+                    duration: 1.2,
+                },
+            });
+
+            contentAnimation.start({
+                y: 0,
+                opacity: 1,
+                transition: {
+                    type: "tween",
+                    duration: 2,
+                    delay: 1,
+                },
+            });
+        }
+
+        if (!inView) {
+            headingAnimation.start({ x: "300vw" });
+            contentAnimation.start({ opacity: 0 });
+        }
+    }, [inView]);
+
     return (
-        <div className={styles.tech}>
-            <div className={styles.top_page_icon_wrapper}>
-                <div className={styles.top_page_icon}>
-                    <SocialIcon
-                        link="#hero"                      
-                    >
-                        <FaArrowUp />
-                    </SocialIcon>
+        <div ref={ref} className={styles.tech}>
+            {props.showSocialIcons && (
+                <div className={styles.top_page_icon_wrapper}>
+                    <div className={styles.top_page_icon}>
+                        <SocialIcon link="#hero">
+                            <FaArrowUp />
+                        </SocialIcon>
+                    </div>
                 </div>
-            </div>
-            <h2>
+            )}
+            <motion.h2 animate={headingAnimation}>
                 {"<"}Technology{" />"}
-            </h2>
-            <div className={styles.tech_icons}>
+            </motion.h2>
+            <motion.div
+                animate={contentAnimation}
+                className={styles.tech_icons}
+            >
                 {TECH_ICONS.map((icon) => (
                     <TechIcon key={icon.id} src={icon.src} alt={icon.alt} />
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 };

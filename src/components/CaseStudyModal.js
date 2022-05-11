@@ -5,7 +5,7 @@ import { FaTimes, FaGithub } from "react-icons/fa";
 import styles from "../styles/CaseStudyModal.module.css";
 import Button from "./Button";
 
-const CaseStudyModalOverlay = ({project, closeCaseStudy}) => {
+const CaseStudyModalOverlay = ({ project, closeCaseStudy }) => {
     return (
         <div className={styles.case_study_container}>
             <div className={styles.case_study}>

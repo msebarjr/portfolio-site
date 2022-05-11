@@ -10,30 +10,36 @@ import {
 } from "../animations/variants";
 import styles from "../styles/Hero.module.css";
 
-const Hero = () => {
+const Hero = (props) => {
     return (
         <div className={styles.hero} id="hero">
             <Background />
             <div className={styles.hero__content}>
-                <div className={styles.hero_icons_wrapper}>
-                    <motion.div
-                        variants={floatingIconsVariants}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ delay: 2, type: "tween", duration: 0.85 }}
-                        className={styles.hero__content_icons}
-                    >
-                        <SocialIcon link="https://www.linkedin.com/in/msebarjr">
-                            <FaLinkedinIn />
-                        </SocialIcon>
-                        <SocialIcon link="https://www.twitter.com/_MichaelSebarJr">
-                            <FaTwitter />
-                        </SocialIcon>
-                        <SocialIcon link="https://www.github.com/msebarjr">
-                            <FaGithub />
-                        </SocialIcon>
-                    </motion.div>
-                </div>
+                {props.showSocialIcons && (
+                    <div className={styles.hero_icons_wrapper}>
+                        <motion.div
+                            variants={floatingIconsVariants}
+                            initial="hidden"
+                            animate="visible"
+                            transition={{
+                                delay: 2,
+                                type: "tween",
+                                duration: 0.85,
+                            }}
+                            className={styles.hero__content_icons}
+                        >
+                            <SocialIcon link="https://www.linkedin.com/in/msebarjr">
+                                <FaLinkedinIn />
+                            </SocialIcon>
+                            <SocialIcon link="https://www.twitter.com/_MichaelSebarJr">
+                                <FaTwitter />
+                            </SocialIcon>
+                            <SocialIcon link="https://www.github.com/msebarjr">
+                                <FaGithub />
+                            </SocialIcon>
+                        </motion.div>
+                    </div>
+                )}
                 <motion.div
                     variants={heroContentVariants}
                     initial="hidden"

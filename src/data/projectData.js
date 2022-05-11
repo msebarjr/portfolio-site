@@ -16,7 +16,7 @@ export const PROJECTS = [
             obstacles:
                 "The design process took me longer than expected since I have never designed a website before. All my experience was strictly coding sites prior. Trying to implement a carousel for the first time was a little bit of a task at first.",
             learned:
-                "The most important and by far the most valuable thing I learned was the ability to listen to the client and what they want. I can only offer opinions but at the end of the day the client is the one paying for the job. You just have to do it right. In addition, I learned how to randomize photos on the Home Screen of the website, so every time a client views the page the images in certain sections are different. I learned how to implement a carousel slider and attach testimonals to an image on hover effect.",
+                "The most important and most valuable thing I have learned was the ability to listen to my client and convey what they invision. At the end of the day I am here to represent the client and all their visions. In addition, I learned how to randomize photos on the Home Screen of the website, so every time a client views the page the images in certain sections are different. I learned how to implement a carousel slider and attach testimonals to an image on hover effect.",
             website: "https://www.mycbphotos.com/",
         },
     },

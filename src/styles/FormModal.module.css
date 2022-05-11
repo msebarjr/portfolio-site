@@ -25,7 +25,7 @@
   border-radius: 5px;
 }
 
-.form_modal:hover {
+.form_modal:hover, .modal_container:hover {
   pointer-events: none;
 }
 

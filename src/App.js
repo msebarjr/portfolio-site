@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import About from "./components/About";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -26,15 +28,32 @@ const quotes = [
 ];
 
 const App = () => {
+    const [openCaseStudy, setOpenCaseStudy] = useState(false);
+    const [showSocialIcons, setShowSocialIcons] = useState(true);
+
+    const handleOpenCaseStudy = () => {
+        setOpenCaseStudy(true);
+        setShowSocialIcons(false);
+    };
+
+    const handleCloseCaseStudy = () => {
+        setOpenCaseStudy(false);
+        setShowSocialIcons(true);
+    };
+
     return (
         <div className="main_container">
             <Navbar />
-            <Hero />
+            <Hero showSocialIcons={showSocialIcons} />
             <Quote cname="about__quote" quote={quotes[0]} />
             <About quote={quotes[0]} />
-            <Tech />
+            <Tech showSocialIcons={showSocialIcons} />
             <Quote cname="project__quote" quote={quotes[1]} />
-            <Projects />
+            <Projects
+                caseStudy={openCaseStudy}
+                handleCaseStudy={handleOpenCaseStudy}
+                handleCloseCaseStudy={handleCloseCaseStudy}
+            />
             <Quote cname="testimonial__quote" quote={quotes[2]} />
             <Testimonials />
             <Contact />
