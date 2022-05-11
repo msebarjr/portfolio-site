@@ -96,6 +96,7 @@
  
   .projects h2 { 
     font-size: 5rem;   
+    margin-left: 0;
   }
   
   .filter_buttons {
