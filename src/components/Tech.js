@@ -8,7 +8,6 @@ import { TECH_ICONS } from "../data/techData";
 import TechIcon from "./TechIcon";
 import SocialIcon from "../components/SocialIcon";
 
-
 const Tech = (props) => {
     const { ref, inView } = useInView({
         threshold: 0.2,
@@ -31,17 +30,22 @@ const Tech = (props) => {
                 opacity: 1,
                 transition: {
                     type: "tween",
-                    duration: 2,
+                    duration: 1.2,
                     delay: 1,
                 },
             });
         }
 
         if (!inView) {
-            headingAnimation.start({ x: "300vw" });
+            headingAnimation.start({
+                x: "300vw",
+                transition: {
+                    duration: 1.5,
+                },
+            });
             contentAnimation.start({ opacity: 0 });
         }
-    }, [inView]);
+    }, [inView, headingAnimation, contentAnimation]);
 
     return (
         <div ref={ref} className={styles.tech}>

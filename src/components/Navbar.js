@@ -5,7 +5,6 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import styles from "../styles/Navbar.module.css";
-import { navVariants } from "../animations/variants";
 import Button from "./Button";
 
 const Navbar = () => {
@@ -22,8 +21,7 @@ const Navbar = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    type: "spring",
-                    delay: 0.5,
+                    type: "spring", 
                     stiffness: 50,
                 },
             });
@@ -32,7 +30,7 @@ const Navbar = () => {
         if (!inView) {
             navAnimation.start({ opacity: 0, y: -250 });
         }
-    }, [inView]);
+    }, [inView, navAnimation]);
 
     useEffect(() => {
         function resizeHandler() {

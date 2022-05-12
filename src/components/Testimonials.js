@@ -29,17 +29,22 @@ const Testimonials = () => {
                 opacity: 1,
                 transition: {
                     type: "tween",
-                    duration: 2,
+                    duration: 1.2,
                     delay: 1,
                 },
             });
         }
 
         if (!inView) {
-            headingAnimation.start({ x: "300vw" });
+            headingAnimation.start({
+                x: "300vw",
+                transition: {
+                    duration: 1.5,
+                },
+            });
             contentAnimation.start({ opacity: 0 });
         }
-    }, [inView]);
+    }, [inView, headingAnimation, contentAnimation]);
 
     return (
         <div ref={ref} className={styles.testimonials} id="testimonials">

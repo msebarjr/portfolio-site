@@ -1,19 +1,3 @@
-export const navVariants = {
-    hidden: {
-        opacity: 0,
-        y: "-250",
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: "spring",
-            delay: 0.5,
-            stiffness: 50,
-        },
-    },
-};
-
 export const heroContentVariants = {
     hidden: {
         opacity: 0,
