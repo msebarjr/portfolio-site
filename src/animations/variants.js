@@ -45,32 +45,6 @@ export const floatingIconsVariants = {
     },
 };
 
-export const slideToRightVariant = {
-    hidden: {
-        x: "-100vw",
-    },
-    visible: {
-        x: 0,
-        transition: {
-            type: "tween",
-            duration: 1.2,
-        },
-    },
-};
-
-export const slideToLeftVariant = {
-    hidden: {
-        x: "100vw",
-    },
-    visible: {
-        x: 0,
-        transition: {
-            type: "tween",
-            duration: 1.2,
-        },
-    },
-};
-
 export const slideUpVariant = {
     hidden: {
         y: "100vh",
@@ -84,16 +58,4 @@ export const slideUpVariant = {
     },
 };
 
-export const modalVariants = {
-    hidden: {
-        y: "-100vh",
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            delay: 0.5,
-        },
-    },
-};
+
