@@ -25,7 +25,9 @@ const Project = ({ project, onClick }) => {
                 ))}
             </div>
             <div className={styles.links}>
-                <div className={styles.link} onClick={onClick}>More Info</div>
+                <div className={styles.link} onClick={onClick}>
+                    More Info
+                </div>
                 <div className={styles.link}>
                     <a href={project.github} target="_blank" rel="noreferrer">
                         <IconContext.Provider

@@ -29,17 +29,15 @@ export const floatingIconsVariants = {
     },
 };
 
-export const slideUpVariant = {
+export const slideToLeftVariant = {
     hidden: {
-        y: "100vh",
+        x: "100vw",
     },
     visible: {
-        y: 0,
+        x: 0,
         transition: {
             type: "tween",
-            duration: 1.5,
+            duration: 0.75,
         },
     },
 };
-
-

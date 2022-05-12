@@ -21,7 +21,7 @@ const Navbar = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    type: "spring", 
+                    type: "spring",
                     stiffness: 50,
                 },
             });
