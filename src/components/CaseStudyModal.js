@@ -63,6 +63,7 @@ const CaseStudyModalOverlay = ({ project, closeCaseStudy }) => {
                         </div>
                     </div>
                 </div>
+                <Button onClick={closeCaseStudy}>Close</Button>
             </div>
         </div>
     );

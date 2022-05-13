@@ -138,3 +138,9 @@
     margin-top: 1rem;
   }
 }
+
+@media screen and (max-width: 359px) {
+  .case_study {
+    margin-top: 70rem;
+  }
+}
