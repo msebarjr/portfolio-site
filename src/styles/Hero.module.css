@@ -172,7 +172,12 @@
 
 @media screen and (max-width: 359px) {
   .hero {
-    padding: 8em 2em 10em;
+    width: 100%;
+    padding: 8em 1.5em 10em;
+  }
+
+  .hero__content {
+    width: 100%;
   }
 
   .hero__content_text {
@@ -181,8 +186,9 @@
 
   .hero__content_text h1 {
     font-family: sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.5;
     font-weight: bold;
+    text-transform: uppercase;
   }
 }
