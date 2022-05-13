@@ -113,3 +113,14 @@
     margin-bottom: 8rem;
   }
 }
+
+@media screen and (max-width: 359px) {
+  .projects {
+   
+  }
+  
+  .projects h2 {
+    font-size: 3rem;
+    margin-top: 25rem;
+  }
+}

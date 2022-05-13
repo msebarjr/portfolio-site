@@ -1,6 +1,6 @@
 .tech_icon {
   width: 150px;
-    height: 150px;
+  height: 150px;
   margin: 3rem;
 }
 
@@ -21,5 +21,13 @@
   .tech_icon {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .tech_icon {
+    width: 75px;
+    height: 75px;
+    margin: 2rem .75rem;
   }
 }

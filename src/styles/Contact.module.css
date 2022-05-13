@@ -71,3 +71,9 @@ button.disable {
     margin: 0; 
   }
 }
+
+@media screen and (max-width: 359px) {
+  .contact form {
+    padding: 3em 1em;
+  }
+}

@@ -31,7 +31,7 @@ const Contact = () => {
         if (!inView) {
             contactAnimation.start({ opacity: 0 });
         }
-    }, [inView]);
+    }, [inView, contactAnimation]);
 
     const formRef = useRef();
 

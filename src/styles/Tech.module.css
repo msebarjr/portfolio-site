@@ -91,3 +91,13 @@
   }  
 
 }
+
+@media screen and (max-width: 359px) {
+  .tech h2 {
+    font-size: 3rem;
+  }
+
+  .tech_icons {
+    margin-bottom: 3rem;
+  }
+}

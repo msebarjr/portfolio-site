@@ -124,3 +124,13 @@
   }   
 }
 
+@media screen and (max-width: 359px) {
+  .about__content h2 {
+    font-size: 3rem;
+    margin-top: -5rem;
+  }
+
+  .about__content_bio {
+    padding: 0 1em;
+  }
+}
