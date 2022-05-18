@@ -36,17 +36,17 @@
 
 .hero__content_text .name {
   font-size: 3.2rem;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 2px;
   margin: 0;
 }
 
 .hero__content_text h1 {
-  font-family: "Fingerprint", "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12rem;
-  font-weight: normal;
-  letter-spacing: 1rem;  
+  font-weight: bold;
   line-height: 1;
+  margin: 1rem 0 2rem -.5rem;
 }
 
 .hero__content_text .info {
@@ -104,7 +104,7 @@
     font-size: 6rem;
     font-weight: normal;
     letter-spacing: 1rem;  
-    line-height: .8;
+    line-height: 1.25;
   }
   
   .hero__content_text .info {    
@@ -161,7 +161,7 @@
 
   .hero__content_text h1 {
     font-size: 5rem; 
-    line-height: 1;     
+    line-height: 1.25;     
   }
 
   .hero__content_text .info {

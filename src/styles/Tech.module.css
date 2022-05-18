@@ -1,5 +1,5 @@
 .tech {
-  padding: 10rem 12.4rem 25rem;
+  padding: 10rem 12.4rem 15rem;
   text-align: right;
   background-color: rgba(20, 35, 60, .5);
   position: relative;
@@ -9,7 +9,7 @@
 .top_page_icon_wrapper {
   width: 5rem;
   position: absolute;
-  right: 7\rem;  
+  right: 7rem;  
 
 }
 
@@ -39,6 +39,7 @@
 @media screen and (max-width: 1450px) {
   .tech {
     padding: 5rem;
+    padding-left: 12rem;
     text-align: right;
   }
 
@@ -49,11 +50,15 @@
   }
 
   .tech_icons {
-    padding-bottom: 15rem;
+    padding-bottom: 8rem;
   }
 }
 
 @media screen and (max-width: 800px) {
+  .tech {
+    padding-left: 5rem;
+  }
+
   .top_page_icon_wrapper, .top_page_icon {
     display: none;
   }
@@ -61,7 +66,7 @@
 
 @media screen and (max-width: 768px) {
   .tech {
-    padding: 7.5rem 2rem 15rem 2rem;    
+    padding: 7.5rem 2rem 10rem 2rem;    
   }
   
   .tech h2 {
@@ -79,7 +84,7 @@
 
 @media screen and (max-width: 465px) {
   .tech {
-    padding-bottom: 20rem;
+    padding-bottom: 8rem;
     padding-left: 0;
     padding-right: 0;
     text-align: center;
@@ -93,6 +98,10 @@
 }
 
 @media screen and (max-width: 359px) {
+  .tech {
+    padding: 3em .5em;
+  }
+  
   .tech h2 {
     font-size: 3rem;
   }

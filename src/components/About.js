@@ -8,7 +8,7 @@ import styles from "../styles/About.module.css";
 
 const About = () => {
     const { ref, inView } = useInView({
-        threshold: 0.2,
+        threshold: 0.1,
     });
     const headingAnimation = useAnimation();
     const contentAnimation = useAnimation();
@@ -16,28 +16,26 @@ const About = () => {
     useEffect(() => {
         if (inView) {
             headingAnimation.start({
-                x: 0,
+                opacity: 1,
                 transition: {
-                    type: "tween",
-                    duration: 1.5,
+                    duration: 0.75,
                 },
             });
 
             contentAnimation.start({
                 opacity: 1,
                 transition: {
-                    type: "tween",
-                    duration: 1.2,
-                    delay: 1,
+                    duration: 0.75,
+                    delay: 0.25,
                 },
             });
         }
 
         if (!inView) {
             headingAnimation.start({
-                x: "-300vw",
+                opacity: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 0.75,
                 },
             });
             contentAnimation.start({ opacity: 0 });
@@ -53,17 +51,13 @@ const About = () => {
                 <motion.div animate={contentAnimation}>
                     <p className={styles.about__content_bio}>
                         I am a very passionate and motivated web and mobile
-                        developer. I am a husband and a father to three kids. I
-                        graduated on the Dean's List with a BA in Computer
-                        Science from Florida International University and a
-                        member of the Tau Sigma's Honor Society. I went to
-                        school online and taught myself Web Development on the
-                        side. Through those experiences I have learned how to
-                        manage my time, stay self-motivated, and use my
-                        resources around me in order to get the job done. I have
-                        a hunger for knowledge so I use every day as an
-                        oppurtunity to learn something new. This plays a key
-                        role as a developer enabling me to constantly stay
+                        developer. Throughout my professional career I have
+                        learned how to manage my time, stay self-motivated, and
+                        use my resources around me in order to get the job done.
+                        <br />
+                        <br />I have a hunger for knowledge so I use every day
+                        as an oppurtunity to learn something new. This plays a
+                        key role as a developer enabling me to constantly stay
                         up-to-date with trends, updates, and features introduced
                         constantly in the field.
                     </p>

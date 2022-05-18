@@ -41,3 +41,16 @@ export const slideToLeftVariant = {
         },
     },
 };
+
+export const slideUpVariant = {
+    hidden: {
+        y: "100vw",
+    },
+    visible: {
+        y: 0,
+        transition: {
+            type: "tween",
+            duration: 0.75,
+        },
+    },
+};

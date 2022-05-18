@@ -22,7 +22,7 @@
 .about__content_bio {
   width: 100%;
   max-width: 850px;
-  margin-top: 4.5em;
+  margin-top: 3em;
   line-height: 1.7;
 }
 
@@ -54,7 +54,7 @@
   }
 
   .about__content {
-    margin-left: 5rem;
+    margin-left: 11rem;
     width: 100%;
   }
   .about__content h2 {
@@ -75,10 +75,16 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .about {
+    padding: 0 5rem;
+  }
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .about {
     padding: 0;
+    margin-top: 5rem;
    }
 
    .about__content {
@@ -125,6 +131,10 @@
 }
 
 @media screen and (max-width: 359px) {
+  .about {
+    margin-top: 10rem;
+  }
+  
   .about__content h2 {
     font-size: 3rem;
     margin-top: -5rem;

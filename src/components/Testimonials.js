@@ -17,29 +17,26 @@ const Testimonials = () => {
     useEffect(() => {
         if (inView) {
             headingAnimation.start({
-                x: 0,
+                opacity: 1,
                 transition: {
-                    type: "tween",
-                    duration: 1.2,
+                    duration: 0.75,
                 },
             });
 
             contentAnimation.start({
-                y: 0,
                 opacity: 1,
                 transition: {
-                    type: "tween",
-                    duration: 1.2,
-                    delay: 1,
+                    duration: 0.75,
+                    delay: 0.25,
                 },
             });
         }
 
         if (!inView) {
             headingAnimation.start({
-                x: "300vw",
+                opacity: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 0.75,
                 },
             });
             contentAnimation.start({ opacity: 0 });
